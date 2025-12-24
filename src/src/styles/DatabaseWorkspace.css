@@ -1,0 +1,132 @@
+.workspace-card {
+  min-height: 100%;
+}
+
+.workspace-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+}
+
+.database-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.database-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.database-item {
+  text-align: left;
+  border-radius: 1rem;
+  border: 1px solid rgba(40, 35, 32, 0.12);
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.database-item.active {
+  border-color: rgba(43, 140, 127, 0.6);
+  box-shadow: 0 10px 24px rgba(43, 140, 127, 0.18);
+}
+
+.database-item:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.database-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.database-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.database-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.detail-meta {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.key-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(43, 140, 127, 0.1);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.record-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.records-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.record-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.record-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
+  border: 1px solid rgba(40, 35, 32, 0.12);
+  padding: 0.75rem 1rem;
+}
+
+.record-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.record-value {
+  margin: 0.5rem 0 0;
+  font-family: 'Space Grotesk', sans-serif;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .workspace-body {
+    grid-template-columns: 1fr;
+  }
+}
